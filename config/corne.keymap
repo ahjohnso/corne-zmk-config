@@ -39,7 +39,7 @@
 // | CTRL | A | S |  D  |  F   |  G  |   |  H  |   J  |  K  |  L  |  ;  |  '   |
 // | SHFT | Z | X |  C  |  V   |  B  |   |  N  |   M  |  ,  |  .  |  /  | ESC  |
 //                | ALT | MISC | SPC |   | GUI | GAME | ENT |
-                        label = "Default";
+                        label = "DEF";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E         &kp R        &kp T        &kp Y    &kp U        &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D         &kp F        &kp G        &kp H    &kp J        &kp K     &kp L   &kp SEMI &kp SQT
@@ -54,7 +54,7 @@
 // | END  | F5 |  F6 | F7  | F8  | PGDN  |   | = | 4 | 5 | 6 | ] | PSCRN |
 // | SHFT | F1 |  F2 | F3  | F4  | NUMLK |   | 0 | 1 | 2 | 3 | \ |   `   |
 //                   |     | DEF |       |   |   |   |   |
-                        label = "Miscellaneous";
+                        label = "MISC";
                         bindings = <
    &kp HOME  &kp F9  &kp F10 &kp F11 &kp F12      &kp PG_UP     &kp MINUS &kp N7 &kp N8 &kp N9 &kp LBKT &kp INS
    &kp END   &kp F5  &kp F6  &kp F7  &kp F8       &kp PG_DN     &kp EQUAL &kp N4 &kp N5 &kp N6 &kp RBKT &kp PSCRN
@@ -69,7 +69,7 @@
 // | CTRL | A | S |  D   |  F  |  G  |   |  H  | LEFT | DOWN | RIGHT | J  | K |
 // | SHFT | Z | X |  C   |  V  |  B  |   |  N  |  M   |   ,  |   .   | /  | L |
 //                | BKSP | ESC | SPC |   | GUI | DEF  | ENT  |
-                        label = "Gaming";
+                        label = "GAME";
                         bindings = <
    &kp TAB   &kp Q &kp W   &kp E    &kp R   &kp T        &kp Y    &kp U        &kp UP    &kp I       &kp O    &kp P
    &kp LCTRL &kp A &kp S   &kp D    &kp F   &kp G        &kp H    &kp LEFT     &kp DOWN  &kp RIGHT   &kp J    &kp K
