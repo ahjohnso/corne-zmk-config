@@ -19,13 +19,12 @@
                 bindings = <&mo>, <&tog>;
             };
 
-            ac: alt_caps {
-                compatible = "zmk,behavior-hold-tap";
-                label = "ALT_CAPS";
-                #binding-cells = <2>;
+            td_mt: tap_dance_mod_tap {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_MOD_TAP";
+                #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                flavor = "hold-preferred";
-                bindings = <&kp>, <&kp>;
+                bindings = <&mt LALT ESC>, <&kp CAPSLOCK>;
             };
         };
     
@@ -40,10 +39,10 @@
 //                | ALT | MISC | SPC |   | GUI | GAME | ENT |
                         label = "DEF";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E         &kp R        &kp T        &kp Y    &kp U        &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D         &kp F        &kp G        &kp H    &kp J        &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C         &kp V        &kp B        &kp N    &kp M        &kp COMMA &kp DOT &kp FSLH &kp ESC
-                         &ac LALT CAPS MO_TOG(MISC) &kp SPACE    &kp LGUI MO_TOG(GAME) &kp RET
+   &kp TAB   &kp Q &kp W &kp E  &kp R        &kp T        &kp Y    &kp U        &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D  &kp F        &kp G        &kp H    &kp J        &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C  &kp V        &kp B        &kp N    &kp M        &kp COMMA &kp DOT &kp FSLH &kp ESC
+                         &td_mt MO_TOG(MISC) &kp SPACE    &kp LGUI MO_TOG(GAME) &kp RET
                         >;
                 };
 
