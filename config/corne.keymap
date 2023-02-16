@@ -22,7 +22,7 @@
             alt_caps: behavior_alt_caps {
                 compatible = "zmk,behavior-hold-tap";
                 label = "ALT_CAPS";
-                #binding-cells = <2>;
+                #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 flavor = "hold-preferred";
                 bindings = <&kp LALT>, <&kp CAPSLOCK>;
