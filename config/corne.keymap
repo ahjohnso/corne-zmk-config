@@ -48,16 +48,16 @@
 
                 misc {
 // -----------------------------------------------------------------------------------------
-// | HOME | F9 | F10 | F11 | F12 | PGUP  |   | - | 7 | 8 | 9 | [ |  INS  |
-// | END  | F5 |  F6 | F7  | F8  | PGDN  |   | = | 4 | 5 | 6 | ] | PSCRN |
-// | SHFT | F1 |  F2 | F3  | F4  | NUMLK |   | 0 | 1 | 2 | 3 | \ |       |
-//                   |     | DEF |       |   |   |   |   |
+// | HOME | F9 | F10 | F11 | F12 | PGUP  |   |    -   |    7   |    8   | 9 | [ |  INS  |
+// | END  | F5 |  F6 | F7  | F8  | PGDN  |   |    =   |    4   |    5   | 6 | ] | PSCRN |
+// | SHFT | F1 |  F2 | F3  | F4  | NUMLK |   |    0   |    1   |    2   | 3 | \ |       |
+//                   |     | DEF |       |   | BT_PRV | BT_NXT | BT_CLR |
                         label = "MISC";
                         bindings = <
-   &kp HOME  &kp F9  &kp F10 &kp F11 &kp F12      &kp PG_UP     &kp MINUS &kp N7 &kp N8 &kp N9 &kp LBKT &kp INS
-   &kp END   &kp F5  &kp F6  &kp F7  &kp F8       &kp PG_DN     &kp EQUAL &kp N4 &kp N5 &kp N6 &kp RBKT &kp PSCRN
-   &kp LSHFT &kp F1  &kp F2  &kp F3  &kp F4       &kp KP_NUM    &kp N0    &kp N1 &kp N2 &kp N3 &kp BSLH &trans
-                             &trans  MO_TOG(MISC) &trans        &trans    &none  &trans
+   &kp HOME  &kp F9  &kp F10 &kp F11 &kp F12      &kp PG_UP     &kp MINUS  &kp N7     &kp N8 &kp N9 &kp LBKT &kp INS
+   &kp END   &kp F5  &kp F6  &kp F7  &kp F8       &kp PG_DN     &kp EQUAL  &kp N4     &kp N5 &kp N6 &kp RBKT &kp PSCRN
+   &kp LSHFT &kp F1  &kp F2  &kp F3  &kp F4       &kp KP_NUM    &kp N0     &kp N1     &kp N2 &kp N3 &kp BSLH &trans
+                             &trans  MO_TOG(MISC) &trans        &bt BT_PRV &bt BT_NXT &bt BT_CLR
                         >;
                 };
 
