@@ -4,9 +4,8 @@
 
 #define DEFAULT 0
 #define MISC 1
-#define GAME 2
 
-#define MO_TOG(layer) &mo_tog layer layer   // Apply momentary-layer-on-hold/toggle-layer-on-tap to specific layer
+#define MO_TOG(layer) &mo_tog layer layer // Apply momentary-layer-on-hold/toggle-layer-on-tap to specific layer
 
 / {
         behaviors {
@@ -33,16 +32,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  | Q | W |  E  |  R   |  T  |   |  Y  |   U  |  I  |  O  |  P  | BKSP |
-// | CTRL | A | S |  D  |  F   |  G  |   |  H  |   J  |  K  |  L  |  ;  |  '   |
-// | SHFT | Z | X |  C  |  V   |  B  |   |  N  |   M  |  ,  |  .  |  /  |  `   |
-//                | ALT | MISC | SPC |   | GUI | GAME | ENT |
+// | TAB  | Q | W |  E  |  R  |  T   |   |  Y   |   U  |  I  |  O  |  P  | BKSP |
+// | CTRL | A | S |  D  |  F  |  G   |   |  H   |   J  |  K  |  L  |  ;  |  '   |
+// | SHFT | Z | X |  C  |  V  |  B   |   |  N   |   M  |  ,  |  .  |  /  |  `   |
+//                | ALT | SPC | MISC |   | LGUI |  SPC | ENT |
                         label = "DEF";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E  &kp R        &kp T        &kp Y    &kp U        &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D  &kp F        &kp G        &kp H    &kp J        &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C  &kp V        &kp B        &kp N    &kp M        &kp COMMA &kp DOT &kp FSLH &kp GRAVE
-                         &td_mt MO_TOG(MISC) &kp SPACE    &kp LGUI MO_TOG(GAME) &kp RET
+   &kp TAB   &kp Q &kp W &kp E  &kp R     &kp T           &kp Y    &kp U     &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D  &kp F     &kp G           &kp H    &kp J     &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C  &kp V     &kp B           &kp N    &kp M     &kp COMMA &kp DOT &kp FSLH &kp GRAVE
+                         &td_mt &kp SPACE MO_TOG(MISC)    &kp LGUI &kp SPACE &kp RET
                         >;
                 };
 
@@ -51,28 +50,13 @@
 // | HOME | F9 | F10 | F11 | F12 | PGUP  |   |    -   |    7   |    8   | 9 | [ |  INS  |
 // | END  | F5 |  F6 | F7  | F8  | PGDN  |   |    =   |    4   |    5   | 6 | ] | PSCRN |
 // | SHFT | F1 |  F2 | F3  | F4  | NUMLK |   |    0   |    1   |    2   | 3 | \ |       |
-//                   |     | DEF |       |   | BT_PRV | BT_NXT | BT_CLR |
+//                   |     |     |  DEF  |   | BT_PRV | BT_NXT | BT_CLR |
                         label = "MISC";
                         bindings = <
-   &kp HOME  &kp F9  &kp F10 &kp F11 &kp F12      &kp PG_UP     &kp MINUS  &kp N7     &kp N8 &kp N9 &kp LBKT &kp INS
-   &kp END   &kp F5  &kp F6  &kp F7  &kp F8       &kp PG_DN     &kp EQUAL  &kp N4     &kp N5 &kp N6 &kp RBKT &kp PSCRN
-   &kp LSHFT &kp F1  &kp F2  &kp F3  &kp F4       &kp KP_NUM    &kp N0     &kp N1     &kp N2 &kp N3 &kp BSLH &trans
-                             &trans  MO_TOG(MISC) &trans        &bt BT_PRV &bt BT_NXT &bt BT_CLR
-                        >;
-                };
-
-                game_layer {
-// -----------------------------------------------------------------------------------------
-// | TAB  | Q | W |  E   |  R  |  T  |   |  Y  |  U   |  UP  |   I   | O  | P |
-// | CTRL | A | S |  D   |  F  |  G  |   |  H  | LEFT | DOWN | RIGHT | J  | K |
-// | SHFT | Z | X |  C   |  V  |  B  |   |  N  |  M   |   ,  |   .   | /  | L |
-//                | BKSP | ESC | SPC |   | GUI | DEF  | ENT  |
-                        label = "GAME";
-                        bindings = <
-   &kp TAB   &kp Q &kp W   &kp E    &kp R   &kp T        &kp Y    &kp U        &kp UP    &kp I       &kp O    &kp P
-   &kp LCTRL &kp A &kp S   &kp D    &kp F   &kp G        &kp H    &kp LEFT     &kp DOWN  &kp RIGHT   &kp J    &kp K
-   &kp LSHFT &kp Z &kp X   &kp C    &kp V   &kp B        &kp N    &kp M        &kp COMMA &kp DOT     &kp FSLH &kp L
-                           &kp BSPC &kp ESC &kp SPACE    &kp LGUI MO_TOG(GAME) &kp RET
+   &kp HOME  &kp F9  &kp F10 &kp F11 &kp F12 &kp PG_UP       &kp MINUS  &kp N7     &kp N8 &kp N9 &kp LBKT &kp INS
+   &kp END   &kp F5  &kp F6  &kp F7  &kp F8  &kp PG_DN       &kp EQUAL  &kp N4     &kp N5 &kp N6 &kp RBKT &kp PSCRN
+   &kp LSHFT &kp F1  &kp F2  &kp F3  &kp F4  &kp KP_NUM      &kp N0     &kp N1     &kp N2 &kp N3 &kp BSLH &trans
+                             &trans  &trans  MO_TOG(MISC)    &bt BT_PRV &bt BT_NXT &bt BT_CLR
                         >;
                 };
         };
